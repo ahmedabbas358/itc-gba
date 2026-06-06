@@ -1,0 +1,30 @@
+name: Monitor IUA ITC
+
+on:
+  schedule:
+    # Run every 5 minutes automatically
+    - cron: '*/5 * * * *'
+  workflow_dispatch: # Allow running manually from a button
+
+jobs:
+  check-website:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Install Dependencies
+        run: npm install
+        
+      - name: Run Monitor Script
+        run: node index.js
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

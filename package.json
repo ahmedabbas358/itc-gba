@@ -1,0 +1,10 @@
+{
+  "name": "iua-github-monitor",
+  "version": "1.0.0",
+  "description": "Monitors IUA website automatically via GitHub Actions",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "cheerio": "^1.0.0-rc.12"
+  }
+}
