@@ -68,7 +68,7 @@ async function run() {
                     if (lastData !== "") {
                         newIssues.push({
                             title: `🚨 رصد تحديث جديد في ${target.name}!`,
-                            body: `تم رصد تحديث أو إضافة جديدة في موقع **${target.name}** الآن.\n\n**الخبر الجديد:** ${currentTitle}\n**التاريخ:** ${currentDate}\n\n[اضغط هنا لزيارة الخبر مباشرة](${fullNewsUrl})`
+                            body: `مرحباً @ahmedabbas358 👋\nتم رصد تحديث أو إضافة جديدة في موقع **${target.name}** الآن.\n\n**الخبر الجديد:** ${currentTitle}\n**التاريخ:** ${currentDate}\n\n[اضغط هنا لزيارة الخبر مباشرة](${fullNewsUrl})`
                         });
                     }
                 } else {
